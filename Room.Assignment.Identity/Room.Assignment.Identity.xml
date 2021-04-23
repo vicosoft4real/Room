@@ -1,0 +1,142 @@
+<?xml version="1.0"?>
+<doc>
+    <assembly>
+        <name>Room.Assignment.Identity</name>
+    </assembly>
+    <members>
+        <member name="T:Room.Assignment.Identity.IdentityServiceRegistration">
+            <summary>
+            
+            </summary>
+        </member>
+        <member name="M:Room.Assignment.Identity.IdentityServiceRegistration.AddIdentityServices(Microsoft.Extensions.DependencyInjection.IServiceCollection,Microsoft.Extensions.Configuration.IConfiguration)">
+            <summary>
+            Adds the identity services.
+            </summary>
+            <param name="services">The services.</param>
+            <param name="configuration">The configuration.</param>
+        </member>
+        <member name="T:Room.Assignment.Identity.Migrations.Initial">
+            <summary>
+            
+            </summary>
+            <seealso cref="T:Microsoft.EntityFrameworkCore.Migrations.Migration" />
+        </member>
+        <member name="M:Room.Assignment.Identity.Migrations.Initial.Up(Microsoft.EntityFrameworkCore.Migrations.MigrationBuilder)">
+            <summary>
+            <para>
+            Builds the operations that will migrate the database 'up'.
+            </para>
+            <para>
+            That is, builds the operations that will take the database from the state left in by the
+            previous migration so that it is up-to-date with regard to this migration.
+            </para>
+            <para>
+            This method must be overridden in each class the inherits from <see cref="T:Microsoft.EntityFrameworkCore.Migrations.Migration" />.
+            </para>
+            </summary>
+            <param name="migrationBuilder">The <see cref="T:Microsoft.EntityFrameworkCore.Migrations.MigrationBuilder" /> that will build the operations.</param>
+        </member>
+        <member name="M:Room.Assignment.Identity.Migrations.Initial.Down(Microsoft.EntityFrameworkCore.Migrations.MigrationBuilder)">
+            <summary>
+            <para>
+            Builds the operations that will migrate the database 'down'.
+            </para>
+            <para>
+            That is, builds the operations that will take the database from the state left in by
+            this migration so that it returns to the state that it was in before this migration was applied.
+            </para>
+            <para>
+            This method must be overridden in each class the inherits from <see cref="T:Microsoft.EntityFrameworkCore.Migrations.Migration" /> if
+            both 'up' and 'down' migrations are to be supported. If it is not overridden, then calling it
+            will throw and it will not be possible to migrate in the 'down' direction.
+            </para>
+            </summary>
+            <param name="migrationBuilder">The <see cref="T:Microsoft.EntityFrameworkCore.Migrations.MigrationBuilder" /> that will build the operations.</param>
+        </member>
+        <member name="T:Room.Assignment.Identity.Models.ApplicationUser">
+            <summary>
+            
+            </summary>
+            <seealso>
+                <cref>Microsoft.AspNetCore.Identity.IdentityUser</cref>
+            </seealso>
+        </member>
+        <member name="P:Room.Assignment.Identity.Models.ApplicationUser.FirstName">
+            <summary>
+            Gets or sets the first name.
+            </summary>
+            <value>
+            The first name.
+            </value>
+        </member>
+        <member name="P:Room.Assignment.Identity.Models.ApplicationUser.LastName">
+            <summary>
+            Gets or sets the last name.
+            </summary>
+            <value>
+            The last name.
+            </value>
+        </member>
+        <member name="T:Room.Assignment.Identity.RoomAssignmentIdentityContext">
+            <summary>
+            
+            </summary>
+            <seealso>
+                <cref>Microsoft.AspNetCore.Identity.EntityFrameworkCore.IdentityDbContext{Room.Assignment.Identity.Models.ApplicationUser}</cref>
+            </seealso>
+        </member>
+        <member name="M:Room.Assignment.Identity.RoomAssignmentIdentityContext.#ctor(Microsoft.EntityFrameworkCore.DbContextOptions{Room.Assignment.Identity.RoomAssignmentIdentityContext})">
+            <summary>
+            Initializes a new instance of the <see cref="T:Room.Assignment.Identity.RoomAssignmentIdentityContext"/> class.
+            </summary>
+            <param name="options">The options.</param>
+        </member>
+        <member name="T:Room.Assignment.Identity.Seed.UserSeeding">
+            <summary>
+            
+            </summary>
+        </member>
+        <member name="M:Room.Assignment.Identity.Seed.UserSeeding.SeedAsync(Microsoft.AspNetCore.Identity.UserManager{Room.Assignment.Identity.Models.ApplicationUser})">
+            <summary>
+            Seeds the user asynchronous.
+            </summary>
+            <param name="userManager">The user manager.</param>
+        </member>
+        <member name="T:Room.Assignment.Identity.Services.AuthenticationService">
+            <summary>
+            
+            </summary>
+            <seealso>
+                <cref>Room.Assignment.Application.Contracts.Identity.IAuthenticationService</cref>
+            </seealso>
+        </member>
+        <member name="M:Room.Assignment.Identity.Services.AuthenticationService.#ctor(Microsoft.AspNetCore.Identity.UserManager{Room.Assignment.Identity.Models.ApplicationUser},Microsoft.Extensions.Options.IOptions{Room.Assignment.Application.Models.Authentication.JwtSettings},Microsoft.AspNetCore.Identity.SignInManager{Room.Assignment.Identity.Models.ApplicationUser})">
+            <summary>
+            Initializes a new instance of the <see cref="T:Room.Assignment.Identity.Services.AuthenticationService"/> class.
+            </summary>
+            <param name="userManager">The user manager.</param>
+            <param name="jwtSettings">The JWT settings.</param>
+            <param name="signInManager">The sign in manager.</param>
+        </member>
+        <member name="M:Room.Assignment.Identity.Services.AuthenticationService.AuthenticateAsync(Room.Assignment.Application.Models.Authentication.AuthenticationRequest)">
+            <summary>
+            Authenticates the asynchronous.
+            </summary>
+            <param name="request">The request.</param>
+            <returns></returns>
+            <exception cref="T:System.Exception">
+            User with {request.Email} not found.
+            or
+            Credentials for '{request.Email} aren't valid'.
+            </exception>
+        </member>
+        <member name="M:Room.Assignment.Identity.Services.AuthenticationService.GenerateToken(Room.Assignment.Identity.Models.ApplicationUser)">
+            <summary>
+            Generates the token.
+            </summary>
+            <param name="user">The user.</param>
+            <returns></returns>
+        </member>
+    </members>
+</doc>

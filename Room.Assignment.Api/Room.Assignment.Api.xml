@@ -1,0 +1,219 @@
+<?xml version="1.0"?>
+<doc>
+    <assembly>
+        <name>Room.Assignment.Api</name>
+    </assembly>
+    <members>
+        <member name="T:Room.Assignment.Api.Controllers.AccountController">
+            <summary>
+            
+            </summary>
+            <seealso cref="T:Microsoft.AspNetCore.Mvc.ControllerBase" />
+        </member>
+        <member name="M:Room.Assignment.Api.Controllers.AccountController.#ctor(Room.Assignment.Application.Contracts.Identity.IAuthenticationService)">
+            <summary>
+            Initializes a new instance of the <see cref="T:Room.Assignment.Api.Controllers.AccountController"/> class.
+            </summary>
+            <param name="authenticationService">The authentication service.</param>
+        </member>
+        <member name="M:Room.Assignment.Api.Controllers.AccountController.AuthenticateAsync(Room.Assignment.Application.Models.Authentication.AuthenticationRequest)">
+            <summary>
+            Authenticates the asynchronous.
+            </summary>
+            <param name="request">The request.</param>
+            <returns></returns>
+        </member>
+        <member name="T:Room.Assignment.Api.Controllers.ServiceController">
+            <summary>
+            
+            </summary>
+        </member>
+        <member name="M:Room.Assignment.Api.Controllers.ServiceController.#ctor(MediatR.IMediator)">
+            <summary>
+            
+            </summary>
+            <param name="mediator"></param>
+        </member>
+        <member name="M:Room.Assignment.Api.Controllers.ServiceController.SearchServices(System.String,System.Int32,System.Int32)">
+            <summary>
+            Searches the services.
+            </summary>
+            <param name="search">The search.</param>
+            <param name="page">The page.</param>
+            <param name="size">The size.</param>
+            <returns></returns>
+        </member>
+        <member name="M:Room.Assignment.Api.Controllers.ServiceController.ActivateBonus(Room.Assignment.Application.Features.Services.Command.ActivatePromoCodeCommand)">
+            <summary>
+            Activates the service bonus.
+            </summary>
+            <param name="activatePromo">The activate promo.</param>
+            <returns></returns>
+        </member>
+        <member name="T:Room.Assignment.Api.DependencyExtensions">
+            <summary>
+            
+            </summary>
+        </member>
+        <member name="M:Room.Assignment.Api.DependencyExtensions.AddDocSwagger(Microsoft.Extensions.DependencyInjection.IServiceCollection)">
+            <summary>
+            Adds the document swagger.
+            </summary>
+            <param name="service">The service.</param>
+        </member>
+        <member name="M:Room.Assignment.Api.DependencyExtensions.UseDocSwagger(Microsoft.AspNetCore.Builder.IApplicationBuilder)">
+            <summary>
+            Uses the document swagger.
+            </summary>
+            <param name="app">The application.</param>
+        </member>
+        <member name="M:Room.Assignment.Api.DependencyExtensions.AddApiVersion(Microsoft.Extensions.DependencyInjection.IServiceCollection)">
+            <summary>
+            Adds the API version.
+            </summary>
+            <param name="service">The service.</param>
+        </member>
+        <member name="T:Room.Assignment.Api.Middleware.ExceptionHandlerMiddleware">
+            <summary>
+            
+            </summary>
+        </member>
+        <member name="M:Room.Assignment.Api.Middleware.ExceptionHandlerMiddleware.#ctor(Microsoft.AspNetCore.Http.RequestDelegate)">
+            <summary>
+            Initializes a new instance of the <see cref="T:Room.Assignment.Api.Middleware.ExceptionHandlerMiddleware"/> class.
+            </summary>
+            <param name="next">The next.</param>
+        </member>
+        <member name="M:Room.Assignment.Api.Middleware.ExceptionHandlerMiddleware.Invoke(Microsoft.AspNetCore.Http.HttpContext)">
+            <summary>
+            Invokes the specified context.
+            </summary>
+            <param name="context">The context.</param>
+        </member>
+        <member name="M:Room.Assignment.Api.Middleware.ExceptionHandlerMiddleware.ConvertException(Microsoft.AspNetCore.Http.HttpContext,System.Exception)">
+            <summary>
+            Converts the exception.
+            </summary>
+            <param name="context">The context.</param>
+            <param name="exception">The exception.</param>
+            <returns></returns>
+        </member>
+        <member name="T:Room.Assignment.Api.Middleware.MiddlewareExtensions">
+            <summary>
+            
+            </summary>
+        </member>
+        <member name="M:Room.Assignment.Api.Middleware.MiddlewareExtensions.UseCustomExceptionHandler(Microsoft.AspNetCore.Builder.IApplicationBuilder)">
+            <summary>
+            Uses the custom exception handler.
+            </summary>
+            <param name="builder">The builder.</param>
+            <returns></returns>
+        </member>
+        <member name="T:Room.Assignment.Api.Program">
+            <summary>
+            
+            </summary>
+        </member>
+        <member name="M:Room.Assignment.Api.Program.Main(System.String[])">
+            <summary>
+            
+            </summary>
+            <param name="args"></param>
+        </member>
+        <member name="M:Room.Assignment.Api.Program.CreateHostBuilder(System.String[])">
+            <summary>
+            
+            </summary>
+            <param name="args"></param>
+            <returns></returns>
+        </member>
+        <member name="T:Room.Assignment.Api.Response.Responses`1">
+            <summary>
+            
+            </summary>
+        </member>
+        <member name="P:Room.Assignment.Api.Response.Responses`1.Data">
+            <summary>
+            
+            </summary>
+        </member>
+        <member name="P:Room.Assignment.Api.Response.Responses`1.Message">
+            <summary>
+            
+            </summary>
+        </member>
+        <member name="P:Room.Assignment.Api.Response.Responses`1.ValidationError">
+            <summary>
+            
+            </summary>
+        </member>
+        <member name="M:Room.Assignment.Api.Response.Responses`1.#ctor(`0,System.String,System.String[])">
+            <summary>
+            
+            </summary>
+            <param name="data"></param>
+            <param name="message"></param>
+            <param name="validation"></param>
+        </member>
+        <member name="T:Room.Assignment.Api.Response.ResponseExt">
+            <summary>
+            
+            </summary>
+        </member>
+        <member name="M:Room.Assignment.Api.Response.ResponseExt.ToResponse``1(``0,System.String,System.String[])">
+            <summary>
+            
+            </summary>
+            <param name="data"></param>
+            <param name="message"></param>
+            <param name="validationError"></param>
+            <returns></returns>
+        </member>
+        <member name="T:Room.Assignment.Api.Services.LoggedInUserService">
+            <summary>
+            
+            </summary>
+        </member>
+        <member name="M:Room.Assignment.Api.Services.LoggedInUserService.#ctor(Microsoft.AspNetCore.Http.IHttpContextAccessor)">
+            <summary>
+            
+            </summary>
+            <param name="httpContextAccessor"></param>
+        </member>
+        <member name="P:Room.Assignment.Api.Services.LoggedInUserService.UserId">
+            <summary>
+            
+            </summary>
+        </member>
+        <member name="T:Room.Assignment.Api.Startup">
+            <summary>
+            
+            </summary>
+        </member>
+        <member name="M:Room.Assignment.Api.Startup.#ctor(Microsoft.Extensions.Configuration.IConfiguration)">
+            <summary>
+            
+            </summary>
+            <param name="configuration"></param>
+        </member>
+        <member name="P:Room.Assignment.Api.Startup.Configuration">
+            <summary>
+            
+            </summary>
+        </member>
+        <member name="M:Room.Assignment.Api.Startup.ConfigureServices(Microsoft.Extensions.DependencyInjection.IServiceCollection)">
+            <summary>
+            
+            </summary>
+            <param name="services"></param>
+        </member>
+        <member name="M:Room.Assignment.Api.Startup.Configure(Microsoft.AspNetCore.Builder.IApplicationBuilder,Microsoft.AspNetCore.Hosting.IWebHostEnvironment)">
+            <summary>
+            
+            </summary>
+            <param name="app"></param>
+            <param name="env"></param>
+        </member>
+    </members>
+</doc>

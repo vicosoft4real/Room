@@ -1,0 +1,19 @@
+apiVersion: v1
+kind: Service
+metadata:
+  name: {{ template "roomassignmentapi.fullname" . }}
+  labels:
+    app: {{ template "roomassignmentapi.name" . }}
+    chart: {{ template "roomassignmentapi.chart" . }}
+    release: {{ .Release.Name }}
+    heritage: {{ .Release.Service }}
+spec:
+  type: {{ .Values.service.type }}
+  ports:
+    - port: {{ .Values.service.port }}
+      targetPort: http
+      protocol: TCP
+      name: http
+  selector:
+    app: {{ template "roomassignmentapi.name" . }}
+    release: {{ .Release.Name }}

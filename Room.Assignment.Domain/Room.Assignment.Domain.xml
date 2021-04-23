@@ -1,0 +1,90 @@
+<?xml version="1.0"?>
+<doc>
+    <assembly>
+        <name>Room.Assignment.Domain</name>
+    </assembly>
+    <members>
+        <member name="T:Room.Assignment.Domain.Common.AuditableEntity">
+            <summary>
+            
+            </summary>
+        </member>
+        <member name="P:Room.Assignment.Domain.Common.AuditableEntity.CreatedBy">
+            <summary>
+            Gets or sets the created by.
+            </summary>
+            <value>
+            The created by.
+            </value>
+        </member>
+        <member name="P:Room.Assignment.Domain.Common.AuditableEntity.CreatedDate">
+            <summary>
+            Gets or sets the created date.
+            </summary>
+            <value>
+            The created date.
+            </value>
+        </member>
+        <member name="P:Room.Assignment.Domain.Common.AuditableEntity.LastModifiedBy">
+            <summary>
+            Gets or sets the last modified by.
+            </summary>
+            <value>
+            The last modified by.
+            </value>
+        </member>
+        <member name="P:Room.Assignment.Domain.Common.AuditableEntity.LastModifiedDate">
+            <summary>
+            Gets or sets the last modified date.
+            </summary>
+            <value>
+            The last modified date.
+            </value>
+        </member>
+        <member name="T:Room.Assignment.Domain.Entities.Service">
+            <summary>
+            Service Entity
+            </summary>
+        </member>
+        <member name="P:Room.Assignment.Domain.Entities.Service.Id">
+            <summary>
+            Gets or sets the identifier.
+            </summary>
+            <value>
+            The identifier.
+            </value>
+        </member>
+        <member name="P:Room.Assignment.Domain.Entities.Service.Name">
+            <summary>
+            Gets or sets the name.
+            </summary>
+            <value>
+            The name.
+            </value>
+        </member>
+        <member name="P:Room.Assignment.Domain.Entities.Service.PromotionCode">
+            <summary>
+            Gets or sets the promotion code.
+            </summary>
+            <value>
+            The promotion code.
+            </value>
+        </member>
+        <member name="P:Room.Assignment.Domain.Entities.Service.IsActivated">
+            <summary>
+            Gets or sets a value indicating whether this instance is activated.
+            </summary>
+            <value>
+              <c>true</c> if this instance is activated; otherwise, <c>false</c>.
+            </value>
+        </member>
+        <member name="P:Room.Assignment.Domain.Entities.Service.Description">
+            <summary>
+            Gets or sets the description.
+            </summary>
+            <value>
+            The description.
+            </value>
+        </member>
+    </members>
+</doc>

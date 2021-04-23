@@ -1,0 +1,238 @@
+<?xml version="1.0"?>
+<doc>
+    <assembly>
+        <name>Room.Assignment.Persistence</name>
+    </assembly>
+    <members>
+        <member name="T:Room.Assignment.Persistence.Configuration.ServicesConfig">
+            <summary>
+            
+            </summary>
+            <seealso>
+                <cref>Microsoft.EntityFrameworkCore.IEntityTypeConfiguration{Room.Assignment.Domain.Entities.Services}</cref>
+            </seealso>
+        </member>
+        <member name="M:Room.Assignment.Persistence.Configuration.ServicesConfig.Configure(Microsoft.EntityFrameworkCore.Metadata.Builders.EntityTypeBuilder{Room.Assignment.Domain.Entities.Service})">
+            <summary>
+            Configures the entity of type <typeparamref>
+                <name>TEntity</name>
+            </typeparamref>
+            .
+            </summary>
+            <param name="builder">The builder to be used to configure the entity type.</param>
+        </member>
+        <member name="T:Room.Assignment.Persistence.Migrations.Init">
+            <summary>
+            
+            </summary>
+            <seealso cref="T:Microsoft.EntityFrameworkCore.Migrations.Migration" />
+        </member>
+        <member name="M:Room.Assignment.Persistence.Migrations.Init.Up(Microsoft.EntityFrameworkCore.Migrations.MigrationBuilder)">
+            <summary>
+            <para>
+            Builds the operations that will migrate the database 'up'.
+            </para>
+            <para>
+            That is, builds the operations that will take the database from the state left in by the
+            previous migration so that it is up-to-date with regard to this migration.
+            </para>
+            <para>
+            This method must be overridden in each class the inherits from <see cref="T:Microsoft.EntityFrameworkCore.Migrations.Migration" />.
+            </para>
+            </summary>
+            <param name="migrationBuilder">The <see cref="T:Microsoft.EntityFrameworkCore.Migrations.MigrationBuilder" /> that will build the operations.</param>
+        </member>
+        <member name="M:Room.Assignment.Persistence.Migrations.Init.Down(Microsoft.EntityFrameworkCore.Migrations.MigrationBuilder)">
+            <summary>
+            <para>
+            Builds the operations that will migrate the database 'down'.
+            </para>
+            <para>
+            That is, builds the operations that will take the database from the state left in by
+            this migration so that it returns to the state that it was in before this migration was applied.
+            </para>
+            <para>
+            This method must be overridden in each class the inherits from <see cref="T:Microsoft.EntityFrameworkCore.Migrations.Migration" /> if
+            both 'up' and 'down' migrations are to be supported. If it is not overridden, then calling it
+            will throw and it will not be possible to migrate in the 'down' direction.
+            </para>
+            </summary>
+            <param name="migrationBuilder">The <see cref="T:Microsoft.EntityFrameworkCore.Migrations.MigrationBuilder" /> that will build the operations.</param>
+        </member>
+        <member name="M:Room.Assignment.Persistence.Migrations.SeededData.Up(Microsoft.EntityFrameworkCore.Migrations.MigrationBuilder)">
+            <summary>
+            <para>
+            Builds the operations that will migrate the database 'up'.
+            </para>
+            <para>
+            That is, builds the operations that will take the database from the state left in by the
+            previous migration so that it is up-to-date with regard to this migration.
+            </para>
+            <para>
+            This method must be overridden in each class the inherits from <see cref="T:Microsoft.EntityFrameworkCore.Migrations.Migration" />.
+            </para>
+            </summary>
+            <param name="migrationBuilder">The <see cref="T:Microsoft.EntityFrameworkCore.Migrations.MigrationBuilder" /> that will build the operations.</param>
+        </member>
+        <member name="M:Room.Assignment.Persistence.Migrations.SeededData.Down(Microsoft.EntityFrameworkCore.Migrations.MigrationBuilder)">
+            <summary>
+            <para>
+            Builds the operations that will migrate the database 'down'.
+            </para>
+            <para>
+            That is, builds the operations that will take the database from the state left in by
+            this migration so that it returns to the state that it was in before this migration was applied.
+            </para>
+            <para>
+            This method must be overridden in each class the inherits from <see cref="T:Microsoft.EntityFrameworkCore.Migrations.Migration" /> if
+            both 'up' and 'down' migrations are to be supported. If it is not overridden, then calling it
+            will throw and it will not be possible to migrate in the 'down' direction.
+            </para>
+            </summary>
+            <param name="migrationBuilder">The <see cref="T:Microsoft.EntityFrameworkCore.Migrations.MigrationBuilder" /> that will build the operations.</param>
+        </member>
+        <member name="T:Room.Assignment.Persistence.PersistenceServiceRegistration">
+            <summary>
+            
+            </summary>
+        </member>
+        <member name="M:Room.Assignment.Persistence.PersistenceServiceRegistration.AddPersistenceService(Microsoft.Extensions.DependencyInjection.IServiceCollection,Microsoft.Extensions.Configuration.IConfiguration)">
+            <summary>
+            Adds the persistence service.
+            </summary>
+            <param name="services">The services.</param>
+            <param name="configuration">The configuration.</param>
+            <returns></returns>
+        </member>
+        <member name="T:Room.Assignment.Persistence.Repositories.AsyncRepository`1">
+            <summary>
+            
+            </summary>
+            <typeparam name="T"></typeparam>
+            <seealso cref="T:Room.Assignment.Application.Contracts.Persistence.IAsyncRepository`1" />
+        </member>
+        <member name="F:Room.Assignment.Persistence.Repositories.AsyncRepository`1.RoomAssignmentDbContext">
+            <summary>
+            
+            </summary>
+        </member>
+        <member name="M:Room.Assignment.Persistence.Repositories.AsyncRepository`1.#ctor(Room.Assignment.Persistence.RoomAssignmentDbContext)">
+            <summary>
+            Initializes a new instance of the <see cref="T:Room.Assignment.Persistence.Repositories.AsyncRepository`1"/> class.
+            </summary>
+            <param name="roomAssignmentDbContext">The room assignment database context.</param>
+        </member>
+        <member name="M:Room.Assignment.Persistence.Repositories.AsyncRepository`1.GetAll(System.Threading.CancellationToken)">
+            <summary>
+            Gets all of <seealso>
+                <cref>T</cref>
+            </seealso>
+            .
+            </summary>
+            <param name="cancellationToken">The cancellation token.</param>
+            <returns></returns>
+        </member>
+        <member name="M:Room.Assignment.Persistence.Repositories.AsyncRepository`1.GetBy(System.Linq.Expressions.Expression{System.Func{`0,System.Boolean}},System.Threading.CancellationToken)">
+            <summary>
+            Gets the by.
+            </summary>
+            <param name="expression">The expression.</param>
+            <param name="cancellationToken"></param>
+            <returns></returns>
+        </member>
+        <member name="M:Room.Assignment.Persistence.Repositories.AsyncRepository`1.GetById(System.String,System.Threading.CancellationToken)">
+            <summary>
+            Gets the <typeparam>
+                <name>T</name>
+            </typeparam> by identifier.
+            </summary>
+            <param name="id">The identifier.</param>
+            <param name="cancellationToken">The cancellation token.</param>
+            <returns></returns>
+        </member>
+        <member name="T:Room.Assignment.Persistence.Repositories.ServiceRepository">
+            <summary>
+            /
+            </summary>
+            <seealso>
+                <cref>Room.Assignment.Persistence.Repositories.AsyncRepository{Room.Assignment.Domain.Entities.Services}</cref>
+            </seealso>
+            <seealso cref="T:Room.Assignment.Application.Contracts.Persistence.IServiceRepository" />
+        </member>
+        <member name="M:Room.Assignment.Persistence.Repositories.ServiceRepository.#ctor(Room.Assignment.Persistence.RoomAssignmentDbContext)">
+            <summary>
+            Initializes a new instance of the <see cref="T:Room.Assignment.Persistence.Repositories.ServiceRepository"/> class.
+            </summary>
+            <param name="roomAssignmentDbContext">The room assignment database context.</param>
+        </member>
+        <member name="M:Room.Assignment.Persistence.Repositories.ServiceRepository.ActivatePromoCode(System.String,System.Threading.CancellationToken)">
+            <summary>
+            Activates the promo code.
+            </summary>
+            <param name="id">The identifier.</param>
+            <param name="cancellationToken"></param>
+            <returns></returns>
+        </member>
+        <member name="T:Room.Assignment.Persistence.RoomAssignmentDbContext">
+            <summary>
+            
+            </summary>
+            <seealso cref="T:Microsoft.EntityFrameworkCore.DbContext" />
+        </member>
+        <member name="F:Room.Assignment.Persistence.RoomAssignmentDbContext.loggedInUserService">
+            <summary>
+            
+            </summary>
+        </member>
+        <member name="M:Room.Assignment.Persistence.RoomAssignmentDbContext.#ctor(Microsoft.EntityFrameworkCore.DbContextOptions{Room.Assignment.Persistence.RoomAssignmentDbContext},Room.Assignment.Application.Contracts.Identity.ILoggedInUserService)">
+            <summary>
+            Initializes a new instance of the <see cref="T:Room.Assignment.Persistence.RoomAssignmentDbContext"/> class.
+            </summary>
+            <param name="options">The options.</param>
+            <param name="loggedInUserService"></param>
+        </member>
+        <member name="P:Room.Assignment.Persistence.RoomAssignmentDbContext.Services">
+            <summary>
+            Gets or sets the services.
+            </summary>
+            <value>
+            The services.
+            </value>
+        </member>
+        <member name="M:Room.Assignment.Persistence.RoomAssignmentDbContext.OnModelCreating(Microsoft.EntityFrameworkCore.ModelBuilder)">
+            <summary>
+            Override this method to further configure the model that was discovered by convention from the entity types
+            exposed in <see cref="T:Microsoft.EntityFrameworkCore.DbSet`1" /> properties on your derived context. The resulting model may be cached
+            and re-used for subsequent instances of your derived context.
+            </summary>
+            <param name="modelBuilder">The builder being used to construct the model for this context. Databases (and other extensions) typically
+            define extension methods on this object that allow you to configure aspects of the model that are specific
+            to a given database.</param>
+            <remarks>
+            If a model is explicitly set on the options for this context (via <see cref="M:Microsoft.EntityFrameworkCore.DbContextOptionsBuilder.UseModel(Microsoft.EntityFrameworkCore.Metadata.IModel)" />)
+            then this method will not be run.
+            </remarks>
+        </member>
+        <member name="M:Room.Assignment.Persistence.RoomAssignmentDbContext.SaveChangesAsync(System.Threading.CancellationToken)">
+            <summary>
+            <para>
+            Saves all changes made in this context to the database.
+            </para>
+            <para>
+            This method will automatically call <see cref="M:Microsoft.EntityFrameworkCore.ChangeTracking.ChangeTracker.DetectChanges" /> to discover any
+            changes to entity instances before saving to the underlying database. This can be disabled via
+            <see cref="P:Microsoft.EntityFrameworkCore.ChangeTracking.ChangeTracker.AutoDetectChangesEnabled" />.
+            </para>
+            <para>
+            Multiple active operations on the same context instance are not supported.  Use 'await' to ensure
+            that any asynchronous operations have completed before calling another method on this context.
+            </para>
+            </summary>
+            <param name="cancellationToken">A <see cref="T:System.Threading.CancellationToken" /> to observe while waiting for the task to complete.</param>
+            <returns>
+            A task that represents the asynchronous save operation. The task result contains the
+            number of state entries written to the database.
+            </returns>
+        </member>
+    </members>
+</doc>
