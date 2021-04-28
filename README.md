@@ -16,3 +16,20 @@ Dependency Inversion, separation of corcerns, single responsibility principle, D
 The common know issues are:
 # 1 Overuse of Thread Synchronization and Locking
 # 2 Frequent Garbage Collection Pauses
+
+#Project Structure When Opened in Visual Studion
+```src
+    ```Api
+        ``` Api Project
+    ```Core
+        ```Application
+        ```Domain
+    ```Infrastructure
+        ```Identity
+        ```Persistence
+ ```Test
+    ```Api Integration Test
+    ```Unit Test
+    ```Persistence
+    
+
