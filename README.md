@@ -15,9 +15,10 @@ Dependency Inversion, separation of corcerns, single responsibility principle, D
 # What are the most importance performance issues in ASP.NET, Web application?
 The common know issues are:
 # 1 Overuse of Thread Synchronization and Locking
-# 2 Frequent Garbage Collection Pauses
+# 2 Frequent Garbage Collection Pauses, etc
 
-#Project Structure When Opened in Visual Studion
+
+# Project Structure When Opened in Visual Studio
 ```src
     ```Api
         ``` Api Project
