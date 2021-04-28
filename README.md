@@ -10,7 +10,7 @@ It helps to detect bugs early. It is part of me. I am not use i can write any co
 
 # What design pattern have you used in your project?
 I used clean architecture for the project architecture. I am a fan of CQRS and mediator design pattern which helps to leverage all the design principles:
-Dependency Inversion, separation of corcerns, single responsibility principle, DRY, Persistence Ignorance etc. 
+Dependency Inversion, separation of concerns, single responsibility principle, DRY, Persistence Ignorance etc. 
 
 # What are the most importance performance issues in ASP.NET, Web application?
 The common know issues are:
