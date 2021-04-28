@@ -6,7 +6,7 @@ It is actually part of me.
 
 # What are your thought about unit testing?
 Unit testing is inevitable in good software design.
-It helps to detect bugs early. It is part of me. I am not use i can write any code without unit-testing.
+It helps to detect bugs early. It is part of me. I am not sure I can write any code without unit-testing.
 
 # What design pattern have you used in your project?
 I used clean architecture for the project architecture. I am a fan of CQRS and mediator design pattern which helps to leverage all the design principles:
